@@ -5,7 +5,6 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -32,7 +31,7 @@ public class Clazz {
     public void setName(String name) {
         this.name = name;
     }
-    @OneToMany(cascade=CascadeType.ALL,mappedBy="clazz",fetch=FetchType.LAZY)
+    @OneToMany(mappedBy="clazz",cascade={CascadeType.ALL})
     public Set<Student> getStudents() {
         return students;
     }

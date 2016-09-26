@@ -1,7 +1,7 @@
 package mavenTest.maven_01.com.lu.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,7 +31,7 @@ public class Student {
     }
     
     @JoinColumn(name="clazz_id")
-    @ManyToOne(fetch=FetchType.EAGER)
+    @ManyToOne(cascade={CascadeType.ALL})
     public Clazz getClazz() {
         return clazz;
     }

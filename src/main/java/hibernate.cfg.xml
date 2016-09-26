@@ -34,6 +34,7 @@
 		<mapping class="mavenTest.maven_01.com.lu.entity.Student"/>
 		<mapping class="mavenTest.maven_01.com.lu.entity.Clazz"/>
 		<mapping class="mavenTest.maven_01.com.lu.entity.User"/>
+		<mapping class="mavenTest.maven_01.com.lu.entity.Group"/>
     </session-factory>
 
 </hibernate-configuration>
